@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20.08.2016, 16:47:28
+    Author     : Dimas
+*/
+
+.liveSearchable-results {
+    background-color: #fff;
+    padding: 5px 0;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: default;
+    z-index: 1000;
+    position: absolute;
+}
+
+.liveSearchable-results li{
+    list-style-type: none;
+    padding: 3px 5px;
+}
+.liveSearchable-results li:hover{
+    cursor: pointer;
+}
+.liveSearchable-results li a:hover{
+    text-decoration: none;
+}
+
+.active-searchable-item {
+    background-color: #f1f1f1;
+}
+
