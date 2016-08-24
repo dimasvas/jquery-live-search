@@ -41,7 +41,7 @@ For more information on how to configure options see below.
 ## Options:
 
 ### url
-Specify url to get data.
+Specify url to get data.<br>
 Required.
 
 ```javascript
@@ -52,8 +52,8 @@ $( "#searchable" ).liveSearch({
 ```
 
 ### method
-Specify request method GET or POST.
-Default value: GET.
+Specify request method GET or POST.<br>
+Default value: GET.<br>
 Optional.
 
 ```javascript
@@ -64,8 +64,8 @@ $( "#searchable" ).liveSearch({
 ```
 
 ### minInput
-Specify the minimum number of characters entered by user to start searching.
-Default value: 2.
+Specify the minimum number of characters entered by user to start searching.<br>
+Default value: 2.<br>
 Optional.
 
 ```javascript
@@ -76,8 +76,8 @@ $( "#searchable" ).liveSearch({
 ```
 
 ### searchDelay
-Specify time in ms between user input and start searching.
-Default value: 400.
+Specify time in ms between user input and start searching.<br>
+Default value: 400.<br>
 Optional.
 
 ```javascript
@@ -88,8 +88,8 @@ $( "#searchable" ).liveSearch({
 ```
 
 ### limitResult
-Specify limit of items to be returned from backend.
-Default value: 10.
+Specify limit of items to be returned from backend.<br>
+Default value: 10.<br>
 Optional.
 
 ```javascript
@@ -101,7 +101,7 @@ $( "#searchable" ).liveSearch({
 
 ### beforeRender
 Method is called after response has been received. Here must be specified property that holds data collection.
-Method gives possibility to work with nay data structure with no backend changes.
+Method gives possibility to work with nay data structure with no backend changes.<br>
 Required.
 
 For example json response is:
@@ -126,7 +126,7 @@ $( "#searchable" ).liveSearch({
 ```
 
 ### beforeRequestSend
-Method is called before request is sent. Can be used to validate user input.
+Method is called before request is sent. Can be used to validate user input.<br>
 Optional.
 
 ```javascript
@@ -140,7 +140,7 @@ $( "#searchable" ).liveSearch({
 ```
 
 ### data
-Specify fields name for text and url. Brings flexibility to receive data from backend with no changes in response.
+Specify fields name for text and url. Brings flexibility to receive data from backend with no changes in response.<br>
 Required.
 
 For example object item:
