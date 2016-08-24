@@ -1,63 +1,63 @@
 {
-  "name": "live-searchable",
-  "title": "jQuery Live Searchable Plugin",
-  "description": "Client-side easy live search",
-  "version": "0.1.0-beta",
-  "license": "MIT",
-  "author": {
-    "name": "Dmitry Vasilenko <dmv.developer@gmail.com>",
-    "email": "dmv.developer@gmail.com"
-  },
-  "contributors": [
-    {
-      "name": "Dmitry Vasilenko",
-      "email": "dmv.developer@gmail.com"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/dimasvas/jquery-live-search"
-  },
-  "bugs": {
-    "url": "https://github.com/dimasvas/jquery-live-search/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/MIT"
-    }
-  ],
-  "scripts": {
-    "test": "grunt",
-    "prepublish": "grunt"
-  },
-  "files": [
-    "dist/jquery.live-search.js"
-  ],
-  "main": "dist/jquery.live-search.js",
-  "dependencies": {
-    "jquery": ">=3.1"
-  },
-  "devDependencies": {
-    "grunt": "^1.0.0",
-    "grunt-contrib-compress": "1.2.0",
-    "grunt-contrib-concat": "1.0.1",
-    "grunt-contrib-copy": "1.0.0",
-    "grunt-contrib-jasmine": "^1.0.3",
-    "grunt-contrib-jshint": "1.0.0",
-    "grunt-contrib-nodeunit": "~0.4.1",
-    "grunt-contrib-qunit": "1.2.0",
-    "grunt-contrib-uglify": "1.0.1",
-    "grunt-contrib-watch": "1.0.0",
-    "grunt-jscs": "2.8.0",
-    "grunt-text-replace": "0.4.0",
-    "qunitjs": "2.0.0"
-  },
-  "keywords": [
-    "jquery",
-    "jquery-plugin",
-    "ajax",
-    "search",
-    "live search"
-  ]
+    "name": "live-searchable",
+    "title": "jQuery Live Searchable Plugin",
+    "description": "Client-side easy live search",
+    "version": "0.1.0-beta",
+    "license": "MIT",
+    "author": {
+        "name": "Dmitry Vasilenko <dmv.developer@gmail.com>",
+        "email": "dmv.developer@gmail.com"
+    },
+    "contributors": [
+        {
+            "name": "Dmitry Vasilenko",
+            "email": "dmv.developer@gmail.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/dimasvas/jquery-live-search"
+    },
+    "bugs": {
+        "url": "https://github.com/dimasvas/jquery-live-search/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/MIT"
+        }
+    ],
+    "scripts": {
+        "test": "grunt",
+        "prepublish": "grunt"
+    },
+    "files": [
+        "dist/jquery.live-search.js"
+    ],
+    "main": "dist/jquery.live-search.js",
+    "dependencies": {
+        "jquery": ">=3.1"
+    },
+    "devDependencies": {
+        "grunt": "^1.0.0",
+        "grunt-contrib-compress": "1.2.0",
+        "grunt-contrib-concat": "1.0.1",
+        "grunt-contrib-copy": "1.0.0",
+        "grunt-contrib-jasmine": "^1.0.3",
+        "grunt-contrib-jshint": "1.0.0",
+        "grunt-contrib-nodeunit": "~0.4.1",
+        "grunt-contrib-qunit": "1.2.0",
+        "grunt-contrib-uglify": "1.0.1",
+        "grunt-contrib-watch": "1.0.0",
+        "grunt-jscs": "2.8.0",
+        "grunt-text-replace": "0.4.0",
+        "qunitjs": "2.0.0"
+    },
+    "keywords": [
+        "jquery",
+        "jquery-plugin",
+        "ajax",
+        "search",
+        "live search"
+    ]
 }

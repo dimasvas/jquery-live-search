@@ -2,12 +2,10 @@
  * jQuery LiveSearch plugin
  *
  * @copyright Copyright 2016, Dmitriy Vasilenko
- * @license   Apache License, Version 2.0 (http://www.opensource.org/licenses/apache2.0.php)
- * @version   v1.0.0
- *
- *
+ * @license   MIT License
+ * @version   v0.1.0-beta
  */
-//TODO: Input validation before submit
+
 (function ($, window, undefined) {
     
     "use strict";
