@@ -17,6 +17,7 @@ Include jQuery and the plugin on a page. Select an input to add live search func
 <form>
 	<input type="text" id="searchable">
 </form>
+
 <script src="jquery.js"></script>
 <script src="jquery.validate.js"></script>
 
