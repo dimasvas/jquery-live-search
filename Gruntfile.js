@@ -6,30 +6,30 @@ module.exports = function( grunt ) {
 
         uglify: {
             options: {
-                    banner: '/*\n    <%= pkg.name %>\n    Copyright (c) 2016 - <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n    Licensed under the MIT license \n    Version: <%= pkg.version %>\n*/\n'
+                banner: '/*\n    <%= pkg.name %>\n    Copyright (c) 2016 - <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n    Licensed under the MIT license \n    Version: <%= pkg.version %>\n*/\n'
             },
 
             dev: {
-                    options: {
-                            beautify: true,
-                            mangle: false
-            },
+                options: {
+                    beautify: true,
+                    mangle: false
+                },
 
-            files: {
-                      'dist/js/jquery.live-search.js': ['src/jquery.live-search.js']
-                    }
+                files: {
+                    'dist/js/jquery.live-search.js': ['src/jquery.live-search.js']
+                }
             },
 
             min: {
-                    files: {
-                            'dist/js/jquery.live-search.min.js': ['src/jquery.live-search.js']
-                    }
+                files: {
+                    'dist/js/jquery.live-search.min.js': ['src/jquery.live-search.js']
+                }
             }
         },
         copy: {
             dist: {
-                    src: "src/jquery.live-search.css",
-                    dest: "dist/css/jquery.live-search.css",
+                src: "src/jquery.live-search.css",
+                dest: "dist/css/jquery.live-search.css",
             }
         },
         jasmine: {
@@ -38,16 +38,12 @@ module.exports = function( grunt ) {
                 options: {
                     specs: "spec/*[S|s]pec.js",
                     vendor: [
-                        "spec/lib/matchers.js",
-                        "spec/lib/jasmine-species/jasmine-grammar.js",
-                        "spec/lib/setup.js",
-                        "lib/jquery-1.9.0.min.js",
-                        "spec/lib/jquery.keymasher.js"
+                        "lib/jquery-3.1.0.min.js",
                     ]
                 }
             }
-      },
-  });
+        }
+    });
   
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-copy" );
@@ -55,5 +51,4 @@ module.exports = function( grunt ) {
 
     grunt.registerTask('test', ['jasmine']);
     grunt.registerTask("default", ["test", "uglify", "copy"]);
-	
 };
