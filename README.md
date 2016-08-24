@@ -1,7 +1,7 @@
 JQuery Live Search Plugin (Beta)
 ================================
 
-The jQuery Live Search Plugin provides provides easy live search functionality for input element.
+The jQuery Live Search Plugin provides easy live search functionality for input element.
 
 ## Getting Started:
 
