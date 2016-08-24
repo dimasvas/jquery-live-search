@@ -83,7 +83,7 @@ Optional.
 ```javascript
 $( "#searchable" ).liveSearch({
         ...
-        searchDelay: 4
+        searchDelay: 1000
     });
 ```
 
@@ -101,10 +101,10 @@ $( "#searchable" ).liveSearch({
 
 ### beforeRender
 Method is called after response has been received. Here must be specified property that holds data collection.
-Method gives possibility to work with nay data structure with no backend changes.<br>
+Method gives possibility to work with any data structure with no backend changes.<br>
 Required.
 
-For example json response is:
+For example, json response:
 
 ```javascript
 {
@@ -140,7 +140,7 @@ $( "#searchable" ).liveSearch({
 ```
 
 ### data
-Specify fields name for text and url. Brings flexibility to receive data from backend with no changes in response.<br>
+Specify fields name for text and url. Functionality gives flexibility to receive data from backend with no changes in response.<br>
 Required.
 
 For example object item:
