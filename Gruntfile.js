@@ -16,20 +16,20 @@ module.exports = function( grunt ) {
 			},
 
 			files: {
-				  'dist/js/jquery.live-searchable.js': ['src/jquery.live-searchable.js']
+				  'dist/js/jquery.live-search.js': ['src/jquery.live-search.js']
 				}
 			},
 
 			min: {
 				files: {
-					'dist/js/jquery.live-searchable.min.js': ['src/jquery.live-searchable.js']
+					'dist/js/jquery.live-search.min.js': ['src/jquery.live-search.js']
 				}
 			}
 		},
 		copy: {
 			dist: {
-				src: "src/jquery.live-searchable.css",
-				dest: "dist/css/jquery.live-searchable.css",
+				src: "src/jquery.live-search.css",
+				dest: "dist/css/jquery.live-search.css",
 			}
 		}
   });

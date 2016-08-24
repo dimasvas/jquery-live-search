@@ -16,10 +16,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/dimasvas/live-searchable"
+    "url": "git://github.com/dimasvas/jquery-live-search"
   },
   "bugs": {
-    "url": "https://github.com/dimasvas/live-searchable/issues"
+    "url": "https://github.com/dimasvas/jquery-live-search/issues"
   },
   "licenses": [
     {
@@ -32,9 +32,9 @@
     "prepublish": "grunt"
   },
   "files": [
-    "dist/jquery.live-searchable.js"
+    "dist/jquery.live-search.js"
   ],
-  "main": "dist/jquery.live-searchable.js",
+  "main": "dist/jquery.live-search.js",
   "dependencies": {
     "jquery": ">=3.1"
   },

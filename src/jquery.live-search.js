@@ -1,5 +1,5 @@
 /**
- * LiveSearchable jQuery plugin
+ * jQuery LiveSearch plugin
  *
  * @copyright Copyright 2016, Dmitriy Vasilenko
  * @license   Apache License, Version 2.0 (http://www.opensource.org/licenses/apache2.0.php)
@@ -12,13 +12,13 @@
     
     "use strict";
     
-    var old = $.fn.liveSearchable;
+    var old = $.fn.liveSearch;
      
-    var LiveSearchable = function(element, options) {
+    var liveSearch = function(element, options) {
         this.$element = $(element);
         this.prevInputValue = '',
 
-        this.options = $.extend({}, $.fn.liveSearchable.defaults, options);
+        this.options = $.extend({}, $.fn.liveSearch.defaults, options);
         
         if (this.options.minInput < 2 ) {
             throw new Error('Invalid "Minimum Input" option!');
@@ -51,8 +51,8 @@
         return this;
     };
     
-    LiveSearchable.prototype = {
-        constructor: LiveSearchable,
+    liveSearch.prototype = {
+        constructor: liveSearch,
         
         setupEvents: function () {
             var self = this;
@@ -63,20 +63,20 @@
                 e.stopPropagation();
             });
             
-            $('.liveSearchable-results').click(function(e){e.stopPropagation();});
+            $('.lsearch-results').click(function(e){e.stopPropagation();});
             
-            $('body').on('mouseenter', '.liveSearchable-results li',  function(e) {
-                $('.active-searchable-item').removeClass('active-searchable-item');
-                $(e.currentTarget).addClass('active-searchable-item');
+            $('body').on('mouseenter', '.lsearch-results li',  function(e) {
+                $('.active-lsearch-item').removeClass('active-lsearch-item');
+                $(e.currentTarget).addClass('active-lsearch-item');
                 
-            }).on('click', '.liveSearchable-results li', function(e){
+            }).on('click', '.lsearch-results li', function(e){
                 self.loadPage($('a', $(e.target)));
                 
             }).click(this.destroySearchContainer);
 
            
            $(window).keydown(function(event){
-                var item = $('.active-searchable-item a');
+                var item = $('.active-lsearch-item a');
                 
                 if(event.keyCode === 13 && item.length) {
                     event.preventDefault();
@@ -152,7 +152,7 @@
             $.each(response, function (key, value) {
                 var li = $('<li>'),
                     item = $('<a/>', {
-                    class: 'live-searchable-item',
+                    class: 'lsearch-item',
                     text: value[dataOpt.text],
                     href: value[dataOpt.href]    
                 }).appendTo($('<div>'));
@@ -169,12 +169,12 @@
             
             return $('<div>', {
                     style: 'width:' + self.$element.outerWidth() + 'px',
-                    class: 'liveSearchable-results'
+                    class: 'lsearch-results'
                 });
         },
         
         clearResults: function () {
-            var resultsContainer = $('.liveSearchable-results');
+            var resultsContainer = $('.lsearch-results');
             
             if (resultsContainer.length > 0){
                 resultsContainer.remove();
@@ -186,7 +186,7 @@
         },
         
         navigate: function(keyCode) {
-            var resultContainer = $( ".liveSearchable-results" );
+            var resultContainer = $( ".lsearch-results" );
 
             if(resultContainer.length){
                 switch(keyCode){
@@ -203,8 +203,8 @@
         },
         
         moveToResult: function(direction, resultContainer) {
-            var activeItem = $('.active-searchable-item', resultContainer),
-                activeClass = 'active-searchable-item',    
+            var activeItem = $('.active-lsearch-item', resultContainer),
+                activeClass = 'active-lsearch-item',    
                 input = this.$element;    
 
             if(!activeItem.length && direction === 'up') {
@@ -216,7 +216,7 @@
                 var firstItem = $('li', resultContainer).first();
                 
                 firstItem.addClass(activeClass);  
-                $(input).val($('.live-searchable-item', firstItem).text());
+                $(input).val($('.lsearch-item', firstItem).text());
             } else {
                 direction === 'down' ? this.moveDown(input, activeItem, activeClass):
                                        this.moveUp(input, activeItem, activeClass);
@@ -233,7 +233,7 @@
             }
        
             prevChild.addClass(itemClass); 
-            input.val($('.live-searchable-item', prevChild).text());
+            input.val($('.lsearch-item', prevChild).text());
         },
         
         moveDown: function (input, activeItem, itemClass) {
@@ -246,11 +246,11 @@
             activeItem.removeClass(itemClass);
             nextChild.addClass(itemClass); 
 
-            input.val($('.live-searchable-item', nextChild).text());
+            input.val($('.lsearch-item', nextChild).text());
         },
         
         destroySearchContainer: function (e) {
-            $('.liveSearchable-results').remove();
+            $('.lsearch-results').remove();
         },
         
         loadPage: function (element) {
@@ -266,27 +266,27 @@
         }
     };
     
-    $.fn.liveSearchable = function (option) {
+    $.fn.liveSearch = function (option) {
         var args = Array.prototype.slice.call(arguments, 1),
             methodReturn,
             $this = $(this),
-            data = $this.data('live-searchable'),
+            data = $this.data('live-search'),
             options = typeof option === 'object' && option;
     
-        if (!data) $this.data('live-searchable', (data = new LiveSearchable(this, options) ));
+        if (!data) $this.data('live-search', (data = new liveSearch(this, options) ));
             
         if (typeof option === 'string') methodReturn = data[ option ].apply(data, args);
 
         return ( methodReturn === undefined ) ? $this : methodReturn;
     };
     
-    $.fn.liveSearchable.defaults = {
+    $.fn.liveSearch.defaults = {
         url: '',
         method: 'GET',
         minInput: 2,
         searchDelay: 200,
         limitResult: 10,
-        resultContainer: 'liveSearchable-results',
+        resultContainer: 'lsearch-results',
         appendContainer: '',
         beforeRender: null,
         beforeRequestSend: null,
@@ -296,10 +296,10 @@
         }
     };
     
-    $.fn.liveSearchable.Constructor = LiveSearchable;
+    $.fn.liveSearch.Constructor = liveSearch;
     
-    $.fn.liveSearchable.noConflict = function () {
-        $.fn.liveSearchable = old;
+    $.fn.liveSearch.noConflict = function () {
+        $.fn.liveSearch = old;
         return this;
     };
      

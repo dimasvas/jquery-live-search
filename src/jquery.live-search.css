@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : Dimas
 */
 
-.liveSearchable-results {
+.lsearch-results {
     background-color: #fff;
     padding: 5px 0;
     border: 1px solid #ccc;
@@ -19,18 +19,18 @@ and open the template in the editor.
     position: absolute;
 }
 
-.liveSearchable-results li{
+.lsearch-results li{
     list-style-type: none;
     padding: 3px 5px;
 }
-.liveSearchable-results li:hover{
+.lsearch-results li:hover{
     cursor: pointer;
 }
-.liveSearchable-results li a:hover{
+.lsearch-results li a:hover{
     text-decoration: none;
 }
 
-.active-searchable-item {
+.active-lsearch-item {
     background-color: #f1f1f1;
 }
 
