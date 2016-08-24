@@ -1,0 +1,30 @@
+{
+	"name": "jquery-live-search",
+	"homepage": "https://github.com/dimasvas/jquery-live-search",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/dimasvas/jquery-live-search.git"
+	},
+	"authors": [
+		"Dmitry Vasilenko <dmv.developer@gmail.com>"
+	],
+	"description": "Easy live search (ajax) functionality",
+	"main": "dist/jquery.live-search.js",
+	"keywords": [
+		"ajax",
+		"search",
+		"live search"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"demo",
+		"lib"
+	],
+	"dependencies": {
+		"jquery": ">= 3.1.0"
+	}
+}
