@@ -11,6 +11,14 @@ Download files from github or use bower.
 
 ### Instalation:
 
+Using bower:<br>
+
+```sh
+bower install jquery-live-search-plg
+```
+
+OR<br>
+
 Include jQuery and the plugin on a page. Select an input to add live search functionality and call the `liveSearch` method.
 
 ```html
