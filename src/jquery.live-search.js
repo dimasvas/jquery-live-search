@@ -18,31 +18,7 @@
 
         this.options = $.extend({}, $.fn.liveSearch.defaults, options);
         
-        if (this.options.minInput < 2 ) {
-            throw new Error('Invalid "Minimum Input" option!');
-        }
-        
-        this.options.searchDelay = parseInt(this.options.searchDelay);
-        if (isNaN(this.options.searchDelay)) {
-            throw new Error('Invalid "Search Delay" option!');
-        }
-
-        this.options.limitResult = parseInt(this.options.limitResult);
-        if (isNaN(this.options.limitResult)) {
-            throw new Error('Invalid "Limit Results" option!');
-        }
-        
-        if(!this.options.url) {
-             throw new Error('Url is not defined!');
-        }
-        
-        if (typeof this.options.beforeRender  !== "function") {
-            throw new Error('"beforeItemRender" Callback must be specified!');
-        }
-        
-        if (!this.options.data.text || !this.options.data.href) {
-            throw new Error('Attributes "data.text" and "data.name" must be defined!');
-        }
+        this.validateOnInit(this.options);
         
         this.setupEvents();
         
@@ -247,16 +223,44 @@
             input.val($('.lsearch-item', nextChild).text());
         },
         
-        destroySearchContainer: function (e) {
-            $('.lsearch-results').remove();
-        },
-        
         loadPage: function (element) {
             var href = element.attr('href');
             
             this.destroySearchContainer();
             
             document.location.href = href;
+        },
+        
+        destroySearchContainer: function (e) {
+            $('.lsearch-results').remove();
+        },
+        
+        validateOnInit: function(options) {
+            if (options.minInput < 2 ) {
+                throw new Error('Invalid "Minimum Input" option!');
+            }
+
+            options.searchDelay = parseInt(options.searchDelay);
+            if (isNaN(options.searchDelay)) {
+                throw new Error('Invalid "Search Delay" option!');
+            }
+
+            options.limitResult = parseInt(options.limitResult);
+            if (isNaN(options.limitResult)) {
+                throw new Error('Invalid "Limit Results" option!');
+            }
+
+            if(!options.url) {
+                 throw new Error('Url is not defined!');
+            }
+
+            if (typeof options.beforeRender  !== "function") {
+                throw new Error('"beforeRender" Callback must be specified!');
+            }
+
+            if (!options.data.text || !options.data.href) {
+                throw new Error('Attributes "data.text" and "data.href" must be defined!');
+            }
         },
         
         destroy: function () {
