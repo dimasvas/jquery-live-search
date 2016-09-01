@@ -29,7 +29,15 @@ module.exports = function( grunt ) {
         copy: {
             dist: {
                 src: "src/jquery.live-search.css",
-                dest: "dist/css/jquery.live-search.css",
+                dest: "dist/css/jquery.live-search.css"
+            },
+            demo_dist_css: {
+                src: "src/jquery.live-search.css",
+                dest: "demo/dist/css/jquery.live-search.css"
+            },
+            demo_dist_js: {
+                src: "dist/js/jquery.live-search.js",
+                dest: "demo/dist/js/jquery.live-search.js"
             }
         },
         jasmine: {
