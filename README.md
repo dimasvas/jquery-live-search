@@ -1,4 +1,4 @@
-JQuery Live Search Plugin
+JQuery Live Search Plugin 
 ================================
 
 The jQuery Live Search Plugin provides easy live search functionality for input element.
