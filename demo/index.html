@@ -31,29 +31,44 @@
 	</script>
 	
 	<style>
-	
+            body {
+                color: #242322;
+            }
+            h1 {
+                color: #C34C21;
+            }
+            form, .exmple-wrap {
+                margin-top:20px;
+            }
+            #searchable {
+                max-width: 300px;
+            }
+            .lsearch-results a {
+                color: #242322;
+            }
 	</style>
 </head>
 
 <body>
 <div class="container">
     <div class="row" style="margin-top: 100px;">
-		<h1 id="banner"><a href="http://jqueryvalidation.org/">jQuery Live Search Plugin</a> Demo</h1>
+		<h1 id="banner">jQuery Live Search Plugin - Demo</h1>
 	</div>
     <div class="row">
-		<p>
-			You must configure server to run demo. Demo is using "database.php" file.
-		</p>
+<!--        <p>You must configure server to run demo. Demo is using "database.php" file.</p>-->
+        
         <form>
-          Search input <br>
-          <input type="text" name="firstname" id="searchable">
-        </form>
+            <div class="form-group">
+              <label for="searchable">Live Search:</label>
+              <input type="text" id="searchable" class="form-control" placeholder="Type here Add..">
+            </div>
+      </form>
 
         <div class="fixed-result-container"></div>
-        <div>
-		<p>Just type some text.</p>
+        <div class="exmple-wrap">
+            <p>Try to find name that starts with <b>"Add.."</b></p>
 		
-		</div>
+        </div>
     </div>
 </div>
 
