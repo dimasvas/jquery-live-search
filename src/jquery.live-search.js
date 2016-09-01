@@ -3,7 +3,6 @@
  *
  * @copyright Copyright 2016, Dmitriy Vasilenko
  * @license   MIT License
- * @version   v0.1.0-beta
  */
 
 (function ($, window, undefined) {

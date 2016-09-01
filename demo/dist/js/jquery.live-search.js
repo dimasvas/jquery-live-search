@@ -2,7 +2,7 @@
     live-searchable
     Copyright (c) 2016 - 2016 Dmitry Vasilenko <dmv.developer@gmail.com>
     Licensed under the MIT license 
-    Version: 0.1.0-beta
+    Version: 1.0.0
 */
 !function($, window, undefined) {
     "use strict";

@@ -2,7 +2,7 @@
     "name": "live-searchable",
     "title": "jQuery Live Searchable Plugin",
     "description": "Client-side easy live search",
-    "version": "0.1.0-beta",
+    "version": "1.0.0",
     "license": "MIT",
     "author": {
         "name": "Dmitry Vasilenko <dmv.developer@gmail.com>",
